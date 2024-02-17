@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial', sans-serif;
+}
+div{
+    display: block;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header ul li {
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#account{
+    height:30px;
+    width:30px;
+    border:1px solid black;
+    padding:6px 9px;  /*top&bott left&right */
+    border-radius:50%;
+    background-color:darkblue;
+    color:white;
+}
+
+#apps {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#apps:hover {
+    background-color: rgba(10, 0, 0, 0.1);
+}
+
+ .header ul li a {
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+ .header ul li a:hover {
+    text-decoration: underline;
+}
+
+ .main {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    
+}
+.middle-card{
+    margin-left:400px;
+    align-content: center;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ .main img {
+    margin-bottom: 30px;
+}
+
+ .main .searchBox {
+    position: relative;
+    width: 40vw;
+    margin-top: -10px;
+}
+
+.material-icons{
+    color:#555;
+}
+ .main .searchBox .search {
+    width: 100%;
+    padding: 13px;
+    padding-left: 45px;
+    padding-right: 60px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+
+}
+
+ .main .searchBox .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    outline: none;
+}
+
+ .main .buttons {
+    margin: 20px;
+}
+
+ .main .buttons button {
+    margin: 5px 5px;
+    padding: 7px 15px;
+    background-color: #f8f9fa;
+    color:#555;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+ .main .buttons button:hover {
+    border: 1px solid #ccc;
+}
+ .main .language{
+    display:flex;
+    margin-top:10px;
+}
+ .main .language li{
+    list-style:none ;
+    margin:0 5px;
+    font-size:12px;
+}
+ .main .language li a{
+    text-decoration: none;
+}
+ .main .language li a:hover {
+    text-decoration: underline;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: #f2f2f2;
+    
+
+}
+.panel{
+    padding: 5px 15px;
+    border-bottom: 1px solid #ddd;
+    display:flex;
+    justify-content: space-between;
+    padding:3px;
+    color: #5f6368;
+}
+.panel ul{
+    display: flex;
+}
+.panel ul li{
+    list-style: none;
+}
+.panel ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color:#5f6368;
+    margin-right:25px;
+}
+
+.container {
+    
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    justify-self: flex-end;
+    align-items: flex-end;
+    /*justify-content: flex-start;*/
+}
+
+#cardBox div {
+    padding-right: 38px;
+}
+
+
+.card-container{
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+    overflow: auto;
+    width: 23vw;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 8px;
+    align-items: flex-end;
+    
+}
+.card-display{
+    display: flex;
+    /*align-content: end;*/
+    align-self: flex-end;
+    background-color: #f2f2f2;
+    border-radius: 10%;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+/*Responsive*/
+/*mobile*/
+@media only screen and (max-width:600px) {
+    .section .main .searchBox {
+        width: 70%;
+    }
+    .section .main .language ul {
+        width: fit-content;
+    }
+    #g-img {
+        width: 50%;
+    }
+    .middle-card {
+        margin-left: 50px;
+        align-content: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .panel {
+        width: fit-content;
+        padding: 3px 2px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        /*justify-content: space-between;*/
+        padding: 0px;
+        color: #5f6368;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .middle-card {
+        margin-left: 40px;
+        margin-right:150px;
+        align-content: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .panel {
+        padding: 3px 3px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        padding: 3px;
+        color: #5f6368;
+        font-size: 12px;
+    }
+    .panel ul li a {
+        text-decoration: none;
+        font-size: 12px;
+        color: #5f6368;
+        margin-right: 25px;
+    }
+}
+/*
+@media only screen and (min-width:768px) {
+    .middle-card {
+        margin-left: 250px;
+        margin-right:250px;
+        align-content: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .middle-card {
+        margin-left: 350px;
+        align-content: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+@media only screen and (min-width:1200px) {
+    .middle-card {
+        margin-left: 400px;
+        align-content: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}*/
